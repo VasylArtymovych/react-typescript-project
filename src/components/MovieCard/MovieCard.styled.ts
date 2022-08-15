@@ -83,7 +83,11 @@ const GoBackBtn = styled("button")`
   background: ${(p) => p.theme.colors.background};
   &:hover {
     background: ${(p) => p.theme.colors.reverseBackground};
-    box-shadow: 0px 5px 15px ${(p) => p.theme.colors.primary};
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      ${(p) => p.theme.colors.primary} 0px -12px 30px,
+      ${(p) => p.theme.colors.primary} 0px 4px 6px,
+      ${(p) => p.theme.colors.primary} 0px 12px 13px,
+      ${(p) => p.theme.colors.primary} 0px -3px 5px;
   }
 `;
 

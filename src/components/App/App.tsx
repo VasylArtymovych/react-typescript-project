@@ -7,8 +7,8 @@ import SharedLayout from "components/SharedLayout";
 const HomePage = lazy(() => import("pages/HomePage"));
 const MoviesPage = lazy(() => import("pages/MoviesPage"));
 const MovieDetailsPage = lazy(() => import("pages/MovieDetailsPage"));
-// const Cast = lazy(() => import('components/Cast'));
-// const Reviews = lazy(() => import('components/Reviews'));
+const Cast = lazy(() => import("components/Cast"));
+const Reviews = lazy(() => import("components/Reviews"));
 
 const App: React.FC = () => {
   return (
@@ -17,8 +17,8 @@ const App: React.FC = () => {
         <Route index element={<HomePage />} />
         <Route path={routePaths.movies} element={<MoviesPage />} />
         <Route path={routePaths.movie} element={<MovieDetailsPage />}>
-          {/* <Route path="cast" element={<Cast />}></Route>
-          <Route path="reviews" element={<Reviews />}></Route> */}
+          <Route path="cast" element={<Cast />}></Route>
+          <Route path="reviews" element={<Reviews />}></Route>
         </Route>
         <Route path="*" element={<Navigate to={routePaths.home} replace />} />
       </Route>
