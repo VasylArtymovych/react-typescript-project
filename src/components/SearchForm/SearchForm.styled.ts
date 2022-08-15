@@ -20,7 +20,10 @@ const StyledInput = styled(Field)`
   border: none;
   outline: none;
   padding-left: ${(p) => p.theme.space[3]}px;
-  background: rgb(216, 203, 149);
+  background: grey;
+  ::placeholder {
+    color: ${(p) => p.theme.colors.primary};
+  }
 `;
 
 const Button = styled("button")`
