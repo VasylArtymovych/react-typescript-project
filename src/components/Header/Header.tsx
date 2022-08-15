@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import routePaths from 'routeSettings';
-import { Section, Container, StyledLink } from './Header.styled';
+import { FC } from "react";
+import routePaths from "routeSettings";
+import { Section, Container, StyledLink } from "./Header.styled";
 
 const Header: FC = () => {
   return (
@@ -11,13 +11,15 @@ const Header: FC = () => {
           <span></span>
           <span></span>
           <span></span>
-          Home</StyledLink>
+          Home
+        </StyledLink>
         <StyledLink to={routePaths.movies}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          Movies</StyledLink>
+          Movies
+        </StyledLink>
       </Container>
     </Section>
   );
