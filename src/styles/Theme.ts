@@ -3,16 +3,16 @@ import { DefaultTheme } from "styled-components";
 const myTheme: DefaultTheme = {
   colors: {
     white: "#fff",
-    black: "#000",
     text: "#000",
     title: "#0c0d37",
     active: "#fa5e06",
-    background: "#20180B",
-    primary: "#DFE6E3",
-    secondary: "#05a",
-    effects: "green",
+    background:
+      "linear-gradient(to top right, rgb(16, 15, 60), rgb(85, 204, 225))",
+    reverseBackground:
+      "linear-gradient(to bottom left, rgb(16, 15, 60), rgb(85, 204, 225))",
+    primary: "#03e9f4",
+    secondary: "rgb(16, 15, 60)",
     accent: "orange",
-    muted: "RGBA(0,0,0,0.85)",
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {

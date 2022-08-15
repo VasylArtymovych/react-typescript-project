@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Section = styled("div")`
   width: 100vw;
-  background: linear-gradient(to top right, rgb(16, 15, 60), rgb(85, 204, 225));
+  background: ${({ theme }) => theme.colors.background};
   -webkit-box-shadow: 0 8px 6px -6px #03e9f4;
   -moz-box-shadow: 0 8px 6px -6px #03e9f4;
   box-shadow: 0 8px 6px -6px #03e9f4;
@@ -26,7 +26,7 @@ const StyledLink = styled(NavLink)`
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #03e9f4;
+  color: ${({ theme }) => theme.colors.primary};
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;

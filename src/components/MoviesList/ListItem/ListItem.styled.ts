@@ -6,7 +6,7 @@ export const Item = styled("li")`
   padding: ${(p) => p.theme.space[2]}px;
   border-radius: ${({ theme }) => theme.radii.normal};
 
-  background: linear-gradient(to top right, rgb(16, 15, 60), rgb(85, 204, 225));
+  background: ${({ theme }) => theme.colors.background};
   box-shadow: rgba(255, 111, 80, 0.25) 0px 54px 55px,
     rgba(255, 111, 80, 0.12) 0px -12px 30px,
     rgba(255, 111, 80, 0.12) 0px 4px 6px, rgba(255, 111, 80, 0.17) 0px 12px 13px,
