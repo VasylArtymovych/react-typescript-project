@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  width: 320px;
+export const Container = styled('div')`
+  width: 100%;
+  padding: ${({ theme }) => theme.space[5]}px;
+  padding-top: 0;
   margin: 0 auto;
-  min-height: 100vh;
-  background: grey;
-  box-shadow: ${({ theme }) => `0px 0px 10px ${theme.colors.primary}`};
-
   @media (min-width: 768px) {
     width: 768px;
   }

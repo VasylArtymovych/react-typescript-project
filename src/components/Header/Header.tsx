@@ -6,8 +6,18 @@ const Header: FC = () => {
   return (
     <Section>
       <Container>
-        <StyledLink to={routePaths.home}>Home</StyledLink>
-        <StyledLink to={routePaths.movies}>Movies</StyledLink>
+        <StyledLink to={routePaths.home}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Home</StyledLink>
+        <StyledLink to={routePaths.movies}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Movies</StyledLink>
       </Container>
     </Section>
   );

@@ -1,11 +1,11 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 // import { Routes, Route, Navigate } from 'react-router-dom';
-// import { lazy } from 'react';
-import 'react-toastify/dist/ReactToastify.css';
-import routePaths from 'routeSettings';
-import SharedLayout from 'components/SharedLayout';
+import { lazy } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import routePaths from "routeSettings";
+import SharedLayout from "components/SharedLayout";
 
-// const HomePage = lazy(() => import('pages/HomePage'));
+const HomePage = lazy(() => import("pages/HomePage"));
 // const MoviesPage = lazy(() => import('pages/MoviesPage'));
 // const MovieDetailsPage = lazy(() => import('pages/MovieDetailsPage'));
 // const Cast = lazy(() => import('components/Cast'));
@@ -15,8 +15,8 @@ const App: React.FC = () => {
   return (
     <Routes>
       <Route path={routePaths.home} element={<SharedLayout />}>
-        {/* <Route index element={<HomePage />} />
-        <Route path={routePaths.movies} element={<MoviesPage />}></Route>
+        <Route index element={<HomePage />} />
+        {/* <Route path={routePaths.movies} element={<MoviesPage />}></Route>
         <Route path={routePaths.movie} element={<MovieDetailsPage />}>
           <Route path="cast" element={<Cast />}></Route>
           <Route path="reviews" element={<Reviews />}></Route>
