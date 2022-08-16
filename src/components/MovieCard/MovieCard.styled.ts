@@ -2,14 +2,13 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const Container = styled("div")`
-  padding: ${({ theme }) => theme.space[4]}px 0;
+  padding: ${({ theme }) => theme.space[4]}px 0px;
   margin: 0 auto;
 `;
 
 export const GoBackBtn = styled("button")`
   width: 65px;
   height: 30px;
-  padding: ${(p) => p.theme.space[3]}px;
   margin-bottom: ${(p) => p.theme.space[4]}px;
   font-size: 12px;
   font-weight: ${(p) => p.theme.fontWeights.bold};
@@ -30,8 +29,15 @@ export const GoBackBtn = styled("button")`
 
 export const InfoContainer = styled("div")`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px auto);
+  justify-content: center;
+  align-items: start;
   grid-gap: 20px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 2fr;
+  }
 `;
 
 export const ImgWraper = styled("div")`
@@ -46,13 +52,15 @@ export const ImgWraper = styled("div")`
 `;
 
 export const TextWraper = styled("div")`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 30px;
   border-radius: 10px;
   background: ${({ theme }) => theme.colors.background};
 `;
 
 export const MovieTitle = styled("h2")`
-  margin-bottom: 20px;
   font-size: ${({ theme }) => theme.fontSizes.l}px;
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   text-align: center;
@@ -60,12 +68,17 @@ export const MovieTitle = styled("h2")`
   text-shadow: 0 2px 4px ${({ theme }) => theme.colors.primary};
 `;
 
-export const TextWrap = styled("div")`
-  margin-bottom: ${({ theme }) => theme.space[5]}px;
+export const TextWrap = styled("div")``;
+
+export const Text = styled("div")`
+  margin-bottom: ${({ theme }) => theme.space[3]}px;
+  font-size: 14px;
   line-height: ${(p) => p.theme.lineHeights.body};
   color: ${({ theme }) => theme.colors.white};
+
   @media (min-width: 1200px) {
     font-size: 18px;
+    margin-bottom: ${({ theme }) => theme.space[5]}px;
   }
 
   & p {
@@ -77,9 +90,13 @@ export const TextWrap = styled("div")`
 
 export const StyledSpan = styled("span")`
   margin-right: 10px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: ${(p) => p.theme.fontWeights.bold};
   color: ${({ theme }) => theme.colors.primary};
+
+  @media (min-width: 1200px) {
+    font-size: 22px;
+  }
 `;
 
 //additional info:
@@ -92,7 +109,6 @@ export const AddInfoWrap = styled("div")`
 
 export const Title = styled("h3")`
   padding: 10px;
-
   font-size: ${(p) => p.theme.fontSizes.m}px;
   font-weight: ${(p) => p.theme.fontWeights.bold};
   border-radius: 10px;

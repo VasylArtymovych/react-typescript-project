@@ -8,6 +8,7 @@ import {
   TextWraper,
   MovieTitle,
   TextWrap,
+  Text,
   StyledSpan,
   AddInfoWrap,
   Title,
@@ -50,23 +51,25 @@ const MovieCard: FC<IMovieCardProps> = ({ movie }) => {
         <TextWraper>
           <MovieTitle>{title}</MovieTitle>
           <TextWrap>
-            <StyledSpan>User score:</StyledSpan> {Math.round(vote_average * 10)}
-            %
-          </TextWrap>
-          <TextWrap>
-            <StyledSpan>Overview:</StyledSpan> {overview}
-          </TextWrap>
-          <TextWrap>
-            <StyledSpan>genres:</StyledSpan>
-            <>
-              {genres.map(({ id, name }, i, arr) => {
-                return i !== arr.length - 1 ? (
-                  <p key={id}>{name + ","}</p>
-                ) : (
-                  <p key={id}>{name + "."}</p>
-                );
-              })}
-            </>
+            <Text>
+              <StyledSpan>User score:</StyledSpan>{" "}
+              {Math.round(vote_average * 10)}%
+            </Text>
+            <Text>
+              <StyledSpan>Overview:</StyledSpan> {overview}
+            </Text>
+            <Text>
+              <StyledSpan>genres:</StyledSpan>
+              <>
+                {genres.map(({ id, name }, i, arr) => {
+                  return i !== arr.length - 1 ? (
+                    <p key={id}>{name + ","}</p>
+                  ) : (
+                    <p key={id}>{name + "."}</p>
+                  );
+                })}
+              </>
+            </Text>
           </TextWrap>
           <AddInfoWrap>
             <Title>Additional information</Title>

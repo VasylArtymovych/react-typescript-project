@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import MovieCard from "components/MovieCard/MovieCard";
 import { fetchMovieById } from "serverAPI";
 import { LoaderOval } from "components/Loader";
-import { Container } from "./MovieDetailsPage.styled";
+import { Container } from "components/Container";
 
 export default function MovieDetailsPage() {
   const [movie, setMovie] = useState(null);
