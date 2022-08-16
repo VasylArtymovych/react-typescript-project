@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/react-typescript-project/static/css/main.3d10672c.css",
-    "main.js": "/react-typescript-project/static/js/main.2f638736.js",
-    "static/js/116.16baddce.chunk.js": "/react-typescript-project/static/js/116.16baddce.chunk.js",
-    "static/js/828.eea55f57.chunk.js": "/react-typescript-project/static/js/828.eea55f57.chunk.js",
-    "static/js/505.1d9d1ae4.chunk.js": "/react-typescript-project/static/js/505.1d9d1ae4.chunk.js",
-    "static/js/217.9333fe5c.chunk.js": "/react-typescript-project/static/js/217.9333fe5c.chunk.js",
-    "static/js/438.15297317.chunk.js": "/react-typescript-project/static/js/438.15297317.chunk.js",
+    "main.js": "/react-typescript-project/static/js/main.56598de5.js",
+    "static/js/583.97b57e19.chunk.js": "/react-typescript-project/static/js/583.97b57e19.chunk.js",
+    "static/js/971.87f80cae.chunk.js": "/react-typescript-project/static/js/971.87f80cae.chunk.js",
+    "static/js/505.04200ef0.chunk.js": "/react-typescript-project/static/js/505.04200ef0.chunk.js",
+    "static/js/217.e7298815.chunk.js": "/react-typescript-project/static/js/217.e7298815.chunk.js",
+    "static/js/438.49072dc9.chunk.js": "/react-typescript-project/static/js/438.49072dc9.chunk.js",
     "static/js/254.c14b4864.chunk.js": "/react-typescript-project/static/js/254.c14b4864.chunk.js",
     "static/js/578.8c434a1f.chunk.js": "/react-typescript-project/static/js/578.8c434a1f.chunk.js",
     "static/js/667.3a5f4b19.chunk.js": "/react-typescript-project/static/js/667.3a5f4b19.chunk.js",
@@ -16,12 +16,12 @@
     "static/media/default.jpeg": "/react-typescript-project/static/media/default.2e01288c0c1a3f24d743.jpeg",
     "index.html": "/react-typescript-project/index.html",
     "main.3d10672c.css.map": "/react-typescript-project/static/css/main.3d10672c.css.map",
-    "main.2f638736.js.map": "/react-typescript-project/static/js/main.2f638736.js.map",
-    "116.16baddce.chunk.js.map": "/react-typescript-project/static/js/116.16baddce.chunk.js.map",
-    "828.eea55f57.chunk.js.map": "/react-typescript-project/static/js/828.eea55f57.chunk.js.map",
-    "505.1d9d1ae4.chunk.js.map": "/react-typescript-project/static/js/505.1d9d1ae4.chunk.js.map",
-    "217.9333fe5c.chunk.js.map": "/react-typescript-project/static/js/217.9333fe5c.chunk.js.map",
-    "438.15297317.chunk.js.map": "/react-typescript-project/static/js/438.15297317.chunk.js.map",
+    "main.56598de5.js.map": "/react-typescript-project/static/js/main.56598de5.js.map",
+    "583.97b57e19.chunk.js.map": "/react-typescript-project/static/js/583.97b57e19.chunk.js.map",
+    "971.87f80cae.chunk.js.map": "/react-typescript-project/static/js/971.87f80cae.chunk.js.map",
+    "505.04200ef0.chunk.js.map": "/react-typescript-project/static/js/505.04200ef0.chunk.js.map",
+    "217.e7298815.chunk.js.map": "/react-typescript-project/static/js/217.e7298815.chunk.js.map",
+    "438.49072dc9.chunk.js.map": "/react-typescript-project/static/js/438.49072dc9.chunk.js.map",
     "254.c14b4864.chunk.js.map": "/react-typescript-project/static/js/254.c14b4864.chunk.js.map",
     "578.8c434a1f.chunk.js.map": "/react-typescript-project/static/js/578.8c434a1f.chunk.js.map",
     "667.3a5f4b19.chunk.js.map": "/react-typescript-project/static/js/667.3a5f4b19.chunk.js.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.3d10672c.css",
-    "static/js/main.2f638736.js"
+    "static/js/main.56598de5.js"
   ]
 }
