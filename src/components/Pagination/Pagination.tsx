@@ -1,25 +1,28 @@
-import { FC, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { StyledBtn, BtnContainer } from './Pagination.styled';
+import { FC } from "react";
+import { StyledBtn, BtnContainer } from "./Pagination.styled";
+import { increment, decrement, setPage } from "redux/moviesSlice";
+import { useAppDispatch, useAppSelector } from "redux/hooks";
 
-interface IProps {
-  page: number;
-  totalPages: number;
-  onClick: React.MouseEventHandler<HTMLLabelElement>;
-}
-
-const Pagination: FC<IProps> = ({ page, totalPages, onClick }) => {
+const Pagination: FC = () => {
+  const { page, totalPages } = useAppSelector((state) => state.page);
+  const dispatch = useAppDispatch();
   const beforeTwoPage = page - 2;
   const beforePage = page - 1;
   const afterTwoPage = page + 2;
   const afterPage = page + 1;
 
-  const [urlSearchParams, setUrlSearchParams] = useSearchParams();
+  const onClick: React.MouseEventHandler<HTMLLabelElement> = (e) => {
+    if (!(e.target instanceof HTMLElement)) return;
+    const value = e.target.textContent;
 
-  useEffect(() => {
-    const pageToString = page.toString();
-    setUrlSearchParams({ ...urlSearchParams, page: pageToString });
-  }, [page, setUrlSearchParams, urlSearchParams]);
+    if (value === "next") {
+      return dispatch(increment());
+    }
+    if (value === "prev") {
+      return dispatch(decrement());
+    }
+    dispatch(setPage(Number(value)));
+  };
 
   return (
     <BtnContainer>
