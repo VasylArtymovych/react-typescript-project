@@ -7,10 +7,19 @@ const StyledForm = styled(Form)`
   align-items: center;
   width: 300px;
   position: absolute;
-  top: 40px;
+  top: 70px;
   left: 50%;
   transform: translateX(-50%);
   border: 1px solid ${(p) => p.theme.colors.primary};
+  @media (min-width: 768px) {
+    top: 28px;
+    left: 65%;
+  }
+
+  @media (min-width: 1200px) {
+    top: 28px;
+    left: 50%;
+  }
 `;
 
 const StyledInput = styled(Field)`

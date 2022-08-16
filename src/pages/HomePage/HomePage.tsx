@@ -3,8 +3,8 @@ import { toast } from "react-toastify";
 import { fetchTrending } from "serverAPI";
 import Title from "components/Title";
 import MoviesList from "components/MoviesList";
-import { Container } from "./HomePage.styled";
 import Pagination from "components/Pagination";
+import { Container } from "components/Container";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
 import { setTotalPages } from "redux/moviesSlice";
 

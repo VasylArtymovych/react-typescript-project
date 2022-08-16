@@ -1,28 +1,18 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-const Section = styled("div")`
+export const Section = styled("div")`
+  position: relative;
   width: 100vw;
+  padding: 20px 0px;
+  margin-bottom: 20px;
   background: ${({ theme }) => theme.colors.background};
   -webkit-box-shadow: 0 8px 6px -6px #03e9f4;
   -moz-box-shadow: 0 8px 6px -6px #03e9f4;
   box-shadow: 0 8px 6px -6px #03e9f4;
 `;
 
-const Container = styled("div")`
-  width: 100%;
-  padding: ${({ theme }) => theme.space[5]}px;
-  margin: 0 auto;
-  @media (min-width: 768px) {
-    width: 768px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 1200px;
-  }
-`;
-
-const StyledLink = styled(NavLink)`
+export const StyledLink = styled(NavLink)`
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -131,5 +121,3 @@ const StyledLink = styled(NavLink)`
     text-shadow: rgba(255, 255, 255, 0.5) 0px 2px 2px;
   }
 `;
-
-export { Container, StyledLink, Section };

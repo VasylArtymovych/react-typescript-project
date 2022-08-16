@@ -1,6 +1,7 @@
 import { FC } from "react";
 import routePaths from "routeSettings";
-import { Section, Container, StyledLink } from "./Header.styled";
+import { Container } from "components/Container";
+import { Section, StyledLink } from "./Header.styled";
 import { useAppDispatch } from "redux/hooks";
 import { setPage } from "redux/moviesSlice";
 

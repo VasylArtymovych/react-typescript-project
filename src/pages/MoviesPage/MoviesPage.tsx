@@ -6,7 +6,7 @@ import SearchForm from "components/SearchForm";
 import MoviesList from "components/MoviesList";
 import Pagination from "components/Pagination";
 import { IMovie } from "types";
-import { Container } from "./MoviesPage.styled";
+import { Container } from "components/Container";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
 import { setTotalPages, setPage } from "redux/moviesSlice";
 
