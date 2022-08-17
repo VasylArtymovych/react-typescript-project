@@ -16,13 +16,13 @@ root.render(
   <React.StrictMode>
     <GlobalStyles />
     <ThemeProvider theme={myTheme}>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Provider store={store}>
           <BrowserRouter basename="/react-typescript-project/">
             <App />
           </BrowserRouter>
-        </PersistGate>
-      </Provider>
+        </Provider>
+      </PersistGate>
     </ThemeProvider>
   </React.StrictMode>
 );

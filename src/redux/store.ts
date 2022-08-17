@@ -1,4 +1,5 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+// import { setupListeners } from "@reduxjs/toolkit/query";
 import {
   persistStore,
   persistReducer,
@@ -11,6 +12,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
 import pageReducer from "./moviesSlice";
+import { moviesApi } from "./moviesAPI";
 
 const persistConfig = {
   key: "page",
@@ -23,19 +25,23 @@ const persistedReducer = persistReducer(persistConfig, pageReducer);
 const store = configureStore({
   reducer: {
     page: persistedReducer,
+    [moviesApi.reducerPath]: moviesApi.reducer,
   },
-  middleware: getDefaultMiddleware({
-    serializableCheck: {
-      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-    },
-  }),
+  middleware: (getDefaultMiddleware) => [
+    ...getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+    moviesApi.middleware,
+  ],
 });
 
-let persistor = persistStore(store);
+// setupListeners(store.dispatch);
 
+let persistor = persistStore(store);
 export { persistor, store };
 
-// export type RootState = ReturnType<typeof store.getState>;
 export type RootState = ReturnType<any>;
-
+// export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

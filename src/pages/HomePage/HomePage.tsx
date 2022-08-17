@@ -1,36 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { toast } from "react-toastify";
-import { fetchTrending } from "serverAPI";
 import Title from "components/Title";
 import MoviesList from "components/MoviesList";
 import Pagination from "components/Pagination";
 import { Container } from "components/Container";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
 import { setTotalPages } from "redux/moviesSlice";
+import { useGetTrendingMoviesQuery } from "redux/moviesAPI";
+import { LoadingLine } from "components/Loader";
 
 const HomePage: React.FC = () => {
-  const [movies, setMovies] = useState([]);
   const { page } = useAppSelector((state) => state.page);
   const dispatch = useAppDispatch();
+  const { data, isLoading, error } = useGetTrendingMoviesQuery(page);
 
   useEffect(() => {
-    async function fetchMovies() {
-      try {
-        const { results, totalPages } = await fetchTrending(page);
-        setMovies(results);
-        dispatch(setTotalPages(totalPages));
-      } catch (error: any) {
-        toast.error(error.message);
-      }
+    if (data) {
+      dispatch(setTotalPages(data.total_pages));
     }
-    fetchMovies();
-  }, [dispatch, page]);
+  }, [data, dispatch]);
 
+  if (error) {
+    console.log(error);
+    toast("TypeError: Failed to fetch");
+  }
   return (
     <Container>
       <Title>Trending Today</Title>
-      <MoviesList moviesArr={movies} />
-      {movies.length > 1 && <Pagination />}
+      {isLoading && <LoadingLine />}
+      {data && <MoviesList moviesArr={data.results} />}
+      {data && data.results.length > 1 && <Pagination />}
     </Container>
   );
 };

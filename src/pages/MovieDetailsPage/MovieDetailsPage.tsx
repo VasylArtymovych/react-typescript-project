@@ -1,35 +1,29 @@
 import { Outlet, useParams } from "react-router-dom";
-import { useState, useEffect, Suspense } from "react";
+import { Suspense } from "react";
 import { toast } from "react-toastify";
 import MovieCard from "components/MovieCard/MovieCard";
-import { fetchMovieById } from "serverAPI";
 import { LoaderOval } from "components/Loader";
 import { Container } from "components/Container";
+import { useGetMovieByIdQuery } from "redux/moviesAPI";
 
 export default function MovieDetailsPage() {
-  const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
+  const { data, isLoading, error } = useGetMovieByIdQuery(movieId ?? "", {
+    skip: movieId === "undefind",
+  });
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const movieData = await fetchMovieById(movieId);
-        setMovie(movieData);
-      } catch (error: any) {
-        toast.error(error.message);
-      }
-    })();
-  }, [movieId]);
+  if (error) {
+    toast("The resource you requested could not be found.");
+  }
 
   return (
     <>
-      {movie ? (
+      {isLoading && <LoaderOval />}
+      {data ? (
         <Container>
-          <MovieCard movie={movie} />
+          <MovieCard movie={data} />
         </Container>
-      ) : (
-        <LoaderOval />
-      )}
+      ) : null}
 
       <Suspense fallback={<LoaderOval />}>
         <Outlet context={movieId} />

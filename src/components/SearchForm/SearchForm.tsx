@@ -1,15 +1,15 @@
-import { FC } from 'react';
+import { FC } from "react";
 // import { useSearchParams } from 'react-router-dom';
-import { Formik } from 'formik';
-import * as Yup from 'yup';
-import { BiSearch } from 'react-icons/bi';
-import { StyledForm, StyledInput, Button } from './SearchForm.styled';
+import { Formik } from "formik";
+import * as Yup from "yup";
+import { BiSearch } from "react-icons/bi";
+import { StyledForm, StyledInput, Button } from "./SearchForm.styled";
 
 const validationSchema = Yup.object().shape({
   search: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
 });
 
 interface IFormProps {
@@ -21,14 +21,8 @@ interface MyFormValues {
 }
 
 const SearchForm: FC<IFormProps> = ({ onSubmit }) => {
-  const initialValues: MyFormValues = { search: '' };
+  const initialValues: MyFormValues = { search: "" };
 
-  // useEffect(() => {
-  //   const searchParam = urlSearchParams.get('search');
-  //   if (searchParam) {
-  //     onSubmit(searchParam);
-  //   }
-  // }, [onSubmit, urlSearchParams]);
   return (
     <>
       <Formik

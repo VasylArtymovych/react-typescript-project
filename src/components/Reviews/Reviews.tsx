@@ -1,37 +1,30 @@
-import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import { animateScroll } from "react-scroll";
 import { toast } from "react-toastify";
-import { fetchMovieReviews } from "serverAPI";
 import { ReviewdList, ReviewdText } from "./Reviews.styled";
 import { Container } from "components/Container";
-import { IReview } from "types/review";
+import { useGetMovieReviewQuery } from "redux/moviesAPI";
+import { LoadingLine } from "components/Loader";
 
 export default function Reviews() {
   const movieId: string = useOutletContext();
-  const [reviews, setReview] = useState<IReview | null>(null);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const reviewData = await fetchMovieReviews(movieId);
-        setReview(reviewData);
-      } catch (error: any) {
-        toast.error(error.message);
-      }
-    })();
-  }, [movieId]);
+  const { data: reviews, isLoading, error } = useGetMovieReviewQuery(movieId);
 
   if (reviews) {
     animateScroll.scrollMore(250);
   }
 
+  if (error) {
+    toast("The resource you requested could not be found.");
+  }
+
   return (
     <Container>
+      {isLoading && <LoadingLine />}
       {reviews &&
-        (reviews.results.length > 0 ? (
+        (reviews.length > 0 ? (
           <ReviewdList>
-            {reviews.results.map(({ id, author, content }) => (
+            {reviews.map(({ id, author, content }) => (
               <li key={id}>
                 <h3>Author: {author}</h3>
                 <ReviewdText> {content}</ReviewdText>
