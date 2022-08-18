@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/react-typescript-project/static/css/main.3d10672c.css",
-    "main.js": "/react-typescript-project/static/js/main.d71723f5.js",
+    "main.js": "/react-typescript-project/static/js/main.4cf05e51.js",
     "static/js/583.a3674789.chunk.js": "/react-typescript-project/static/js/583.a3674789.chunk.js",
     "static/js/971.f8e21094.chunk.js": "/react-typescript-project/static/js/971.f8e21094.chunk.js",
-    "static/js/505.613cd1fd.chunk.js": "/react-typescript-project/static/js/505.613cd1fd.chunk.js",
+    "static/js/505.de091306.chunk.js": "/react-typescript-project/static/js/505.de091306.chunk.js",
     "static/js/217.f9ebf323.chunk.js": "/react-typescript-project/static/js/217.f9ebf323.chunk.js",
     "static/js/438.8f76ce9f.chunk.js": "/react-typescript-project/static/js/438.8f76ce9f.chunk.js",
     "static/js/578.8c434a1f.chunk.js": "/react-typescript-project/static/js/578.8c434a1f.chunk.js",
@@ -15,10 +15,10 @@
     "static/media/default.jpeg": "/react-typescript-project/static/media/default.2e01288c0c1a3f24d743.jpeg",
     "index.html": "/react-typescript-project/index.html",
     "main.3d10672c.css.map": "/react-typescript-project/static/css/main.3d10672c.css.map",
-    "main.d71723f5.js.map": "/react-typescript-project/static/js/main.d71723f5.js.map",
+    "main.4cf05e51.js.map": "/react-typescript-project/static/js/main.4cf05e51.js.map",
     "583.a3674789.chunk.js.map": "/react-typescript-project/static/js/583.a3674789.chunk.js.map",
     "971.f8e21094.chunk.js.map": "/react-typescript-project/static/js/971.f8e21094.chunk.js.map",
-    "505.613cd1fd.chunk.js.map": "/react-typescript-project/static/js/505.613cd1fd.chunk.js.map",
+    "505.de091306.chunk.js.map": "/react-typescript-project/static/js/505.de091306.chunk.js.map",
     "217.f9ebf323.chunk.js.map": "/react-typescript-project/static/js/217.f9ebf323.chunk.js.map",
     "438.8f76ce9f.chunk.js.map": "/react-typescript-project/static/js/438.8f76ce9f.chunk.js.map",
     "578.8c434a1f.chunk.js.map": "/react-typescript-project/static/js/578.8c434a1f.chunk.js.map",
@@ -27,6 +27,6 @@
   },
   "entrypoints": [
     "static/css/main.3d10672c.css",
-    "static/js/main.d71723f5.js"
+    "static/js/main.4cf05e51.js"
   ]
 }
