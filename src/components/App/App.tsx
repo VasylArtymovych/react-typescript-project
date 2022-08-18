@@ -10,7 +10,7 @@ const MovieDetailsPage = lazy(() => import("pages/MovieDetailsPage"));
 const Cast = lazy(() => import("components/Cast"));
 const Reviews = lazy(() => import("components/Reviews"));
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <Routes>
       <Route path={routePaths.home} element={<SharedLayout />}>

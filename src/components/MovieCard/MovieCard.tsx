@@ -74,14 +74,20 @@ const MovieCard: FC<IMovieCardProps> = ({ movie }) => {
           <AddInfoWrap>
             <Title>Additional information</Title>
             <div>
-              <StyledLink to="cast" state={{ from: location.state.from }}>
+              <StyledLink
+                to="cast"
+                state={{ from: location?.state?.from ?? "/movies" }}
+              >
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Cast
               </StyledLink>
-              <StyledLink to="reviews" state={{ from: location.state.from }}>
+              <StyledLink
+                to="reviews"
+                state={{ from: location?.state?.from ?? "/movies" }}
+              >
                 <span></span>
                 <span></span>
                 <span></span>
