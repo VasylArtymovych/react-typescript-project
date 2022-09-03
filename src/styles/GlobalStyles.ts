@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import BgrImg from 'images/MovieBgr.jpg';
+import { createGlobalStyle } from "styled-components";
+import BgrImg from "images/MovieBgr.jpg";
 
 const GlobalStyles = createGlobalStyle`
   html {

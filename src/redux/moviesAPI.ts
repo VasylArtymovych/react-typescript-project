@@ -8,7 +8,7 @@ export const moviesApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "https://api.themoviedb.org/3/" }),
   endpoints: (builder) => ({
     getTrendingMovies: builder.query<IMoviesResponse, string>({
-      query: (page) => `trending/all/day?api_key=${api_key}&page=${page}`,
+      query: (page) => `trending/movie/day?api_key=${api_key}&page=${page}`,
     }),
     getMoviesByName: builder.query<
       IMoviesResponse,
